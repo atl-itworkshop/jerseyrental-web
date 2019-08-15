@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={require("./jersey.jpg")} width="50%" alt="logo" />
+        <img src={require("./jersey.png")} width="25%" alt="logo" />
         <p>
           Sports Fans Unite !!  Never go to a sporting event without your favorite jersey !!
                </p>

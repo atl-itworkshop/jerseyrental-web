@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from './jersey.jpg';
 
 import './App.css';
 
@@ -6,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={require("./jersey.png")} width="25%" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Sports Fans Unite !!  Never go to a sporting event without your favorite jersey !!
                </p>

@@ -1,6 +1,8 @@
 # jerseyswap-web
 The web frontend of the JerseySwap app 
 
+![image](https://user-images.githubusercontent.com/8188/63205604-ec9d9380-c074-11e9-90b0-f719bf556527.png)
+
 ## Available Scripts
 
 In the project directory, you can run:

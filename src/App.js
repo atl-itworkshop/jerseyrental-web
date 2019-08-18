@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import logo from "./jersey.jpg";
 import Header from "./components/layout/Header";
 import About from "./components/pages/About";
-
 import "./App.css";
 
 function App() {
@@ -11,7 +10,6 @@ function App() {
       <Router>
          <div className="App">
             <Header title="Jersey Rental" />
-
             <Route
                exact
                path="/"
@@ -35,7 +33,6 @@ function App() {
                   </React.Fragment>
                )}
             />
-
             <Route path="/about" component={About} />
          </div>
       </Router>

@@ -7,6 +7,10 @@ The web frontend of the JerseySwap app
 
 In the project directory, you can run:
 
+### `yarn install`
+
+This will install any dependencies and will update the `yarn.lock` file if you added some new dependencies. The `yarn.lock` file needs to be always checked in.
+
 ### `yarn start`
 
 Runs the app in the development mode.<br>

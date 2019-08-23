@@ -1,9 +1,11 @@
 # jerseyswap-web
-The web frontend of the JerseySwap app 
+The web frontend for the JerseyRental app 
 
 ![image](https://user-images.githubusercontent.com/8188/63205604-ec9d9380-c074-11e9-90b0-f719bf556527.png)
 
-## Available Scripts
+## Local Development
+
+Use these scripts to run the website locally on your machine.
 
 In the project directory, you can run:
 
@@ -31,3 +33,28 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
+
+## Run in Docker
+
+To be to run the website in a container using Docker, follow these steps:
+
+### Build & Run
+```
+docker-compose up -d --build
+```
+
+Runs the app in the development mode.<br>
+Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
+
+### List 
+
+```
+docker-compose ps
+```
+
+### Stop & Remove
+
+```
+docker-compose stop
+docker-compose rm
+```

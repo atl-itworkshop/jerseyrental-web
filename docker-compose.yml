@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  web:
+    user: root
+    build:
+      context: .
+      args:
+        BUILD_ENV: "development"
+    ports:
+      - 8080:3000
+    volumes:
+      - $HOME/.cache/yarn-offline-mirror:/home/node/.cache/yarn-offline-mirror
+      - web-yarn:/home/node/.cache/yarn
+      - .:/usr/local/src/jerseyrental-web
+      - empty_node_modules:/usr/local/src/jerseyrental-web/node_modules # do not link node_modules in, and persist it between dc up runs
+      - node_modules:/usr/local/src/node_modules
+
+volumes:
+  web-yarn:
+  empty_node_modules:
+  node_modules:

@@ -6,25 +6,22 @@ const MainPage = () => {
    const mainAppContext = useContext(MainAppContext);
    const { getTagline, tagline } = mainAppContext;
 
-  useEffect(() => {
-    getTagline();
-    // eslint-disable-next-line
-  }, []); 
-
+   useEffect(() => {
+      getTagline();
+      // eslint-disable-next-line
+   }, []);
 
    return (
       <header className="App-header">
          <img src={logo} className="App-logo" alt="Jersey Rental Logo" />
-         <p>
-            {tagline}
-         </p>
+         <p>{tagline}</p>
          <a
             className="App-link"
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
          >
-            Learn how Jersey Rental works
+            Learn how Jersey Rental works !!
          </a>
       </header>
    );

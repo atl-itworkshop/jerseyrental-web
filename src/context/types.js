@@ -1,4 +1,4 @@
-export const GET_TAGLINE = 'GET_TAGLINE';
 export const SET_LOADING = 'SET_LOADING';
 export const GET_CONTRIBUTORS = 'GET_CONTRIBUTORS';
 export const GET_CONTRIBUTOR = 'GET_CONTRIBUTOR';
+export const GET_POSTS = 'GET_POSTS';

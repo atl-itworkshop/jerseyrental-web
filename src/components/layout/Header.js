@@ -17,7 +17,7 @@ const Header = ({ title }) => {
                <Link to="/">Events</Link>
             </li>
             <li>
-               <Link to="/">Help</Link>
+               <Link to="/testimonials">Testimonials</Link>
             </li>
             <li>
                <Link to="/">How it works</Link>
@@ -29,7 +29,7 @@ const Header = ({ title }) => {
             </li>
             <li>
                <Link to="/">
-                  <button className="btn-med">Sign in / up</button>
+                  <button className="btn btn-sm">Sign in / up</button>
                </Link>
             </li>
             <li>
@@ -49,3 +49,4 @@ Header.propTypes = {
 };
 
 export default Header;
+ 

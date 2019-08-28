@@ -13,24 +13,20 @@ const Contributors = () => {
       // eslint-disable-next-line
    }, []);
 
-
-   if (loading) return <Spinner />;
-
    if (loading) {
-    return <Spinner />;
- } else {
-    return (
-       <div style={userStyle}>
-          {contributors.map(contributor => (
-             <ContributorItem
-                key={contributor.id}
-                contributor={contributor}
-             />
-          ))}
-       </div>
-    );
- }
-   
+      return <Spinner />;
+   } else {
+      return (
+         <div style={userStyle}>
+            {contributors.map(contributor => (
+               <ContributorItem
+                  key={contributor.id}
+                  contributor={contributor}
+               />
+            ))}
+         </div>
+      );
+   }
 };
 
 const userStyle = {

@@ -13,7 +13,7 @@ const GithubState = props => {
 
    const [state, dispatch] = useReducer(GithubReducer, initialState);
 
-   // Search Users
+   // GET Contributors
    const getContributors = async () => {
       setLoading();
 
@@ -27,7 +27,7 @@ const GithubState = props => {
       });
    };
 
-   // Get User
+   // GET Contributor
    const getContributor = async username => {
       setLoading();
 

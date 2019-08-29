@@ -4,7 +4,7 @@ import logo from "../../jersey.jpg";
 const MainPage = () => {
 
    return (
-      <header className="App-header">
+      <header>
          <img src={logo} className="App-logo" alt="Jersey Rental Logo" />
          <p>Sports Fans Unite !! Never go to a sporting event without your favorite jersey...</p>
          <a

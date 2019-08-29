@@ -11,29 +11,30 @@ import Events from "./components/pages/Events";
 import GithubState from "./context/github/GithubState";
 import FakeapiState from "./context/fakeapi/FakeapiState";
 
-import "./App.css";
+// import "./App.css";
 
 const App = () => {
    return (
       <GithubState>
          <FakeapiState>
             <Router>
-               <div className="App">
+               <div>
                   <Header />
                   <div className="container">
                      <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route
-                           exact
-                           path="/testimonials"
-                           component={Testimonials}
-                        />
+
                         <Route exact path="/about" component={About} />
                         <Route exact path="/events" component={Events} />
                         <Route
                            exact
                            path="/contributor/:login"
                            component={Contributor}
+                        />
+                        <Route
+                           exact
+                           path="/testimonials"
+                           component={Testimonials}
                         />
                         <Route component={NotFound} />
                      </Switch>

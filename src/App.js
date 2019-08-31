@@ -7,7 +7,7 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Testimonials from "./components/pages/Testimonials";
 import NotFound from "./components/pages/NotFound";
-
+import Events from "./components/pages/Events";
 import GithubState from "./context/github/GithubState";
 import FakeapiState from "./context/fakeapi/FakeapiState";
 
@@ -29,6 +29,7 @@ const App = () => {
                            component={Testimonials}
                         />
                         <Route exact path="/about" component={About} />
+                        <Route exact path="/events" component={Events} />
                         <Route
                            exact
                            path="/contributor/:login"

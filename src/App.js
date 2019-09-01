@@ -18,9 +18,9 @@ const App = () => {
       <GithubState>
          <FakeapiState>
             <Router>
-               <div>
+               <div className="text-center">
                   <Header />
-                  <div className="container">
+                  <div style={containerStyle}>
                      <Switch>
                         <Route exact path="/" component={Home} />
 
@@ -44,6 +44,13 @@ const App = () => {
          </FakeapiState>
       </GithubState>
    );
+};
+
+const containerStyle = {
+   maxWidth: "1100px",
+   margin: "auto",
+   overflow: "hidden",
+   padding: "0 2rem"
 };
 
 export default App;

@@ -3,6 +3,8 @@ import ContributorItem from "./ContributorItem";
 import Spinner from "../layout/Spinner";
 import GithubContext from "../../context/github/githubContext";
 
+import { Row, Col } from "react-bootstrap";
+
 const Contributors = () => {
    const githubContext = useContext(GithubContext);
 
@@ -17,22 +19,20 @@ const Contributors = () => {
       return <Spinner />;
    } else {
       return (
-         <div style={userStyle}>
-            {contributors.map(contributor => (
-               <ContributorItem
-                  key={contributor.id}
-                  contributor={contributor}
-               />
-            ))}
+         <div>
+            <Row>
+               {contributors.map(contributor => (
+                  <Col lg="4" sm="6">
+                     <ContributorItem
+                        key={contributor.id}
+                        contributor={contributor}
+                     />
+                  </Col>
+               ))}
+            </Row>
          </div>
       );
    }
-};
-
-const userStyle = {
-   display: "grid",
-   gridTemplateColumns: "repeat(3, 1fr)",
-   gridGap: "1rem"
 };
 
 export default Contributors;

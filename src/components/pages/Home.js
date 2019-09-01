@@ -4,7 +4,7 @@ import MainPage from '../mainpage/MainPage';
 const Home = () => {
    return (
       <Fragment>
-         <MainPage />
+         <MainPage/>
       </Fragment>
    );
 };

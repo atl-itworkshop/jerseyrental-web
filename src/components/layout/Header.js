@@ -1,42 +1,81 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+
+import styled from "styled-components";
+import { Navbar, Nav, Button } from "react-bootstrap";
+
+const Styles = styled.div`
+   .navbar {
+      background-color: #dc3545;
+   }
+
+   a,
+   .navbar-brand,
+   .navbar-nav .nav-link {
+      color: #bbb;
+
+      &:hover {
+         color: white;
+      }
+   }
+`;
 
 const Header = ({ title }) => {
    return (
-      <nav className="navbar bg-primary">
-         <h1>{title}</h1>
-         <ul>
-            <li>
-               <Link to="/">Home</Link>
-            </li>
-            <li>
-               <Link to="/">Rent</Link>
-            </li>
-            <li>
-               <Link to="/events">Events</Link>
-            </li>
-            <li>
-               <Link to="/testimonials">Testimonials</Link>
-            </li>
-            <li>
-               <Link to="/">How it works</Link>
-            </li>
-            <li>
-               <Link to="/">
-                  <i className="fas fa-search" />
-               </Link>
-            </li>
-            <li>
-               <Link to="/">
-                  <button className="btn btn-sm">Sign in / up</button>
-               </Link>
-            </li>
-            <li>
-               <Link to="/about">About</Link>
-            </li>
-         </ul>
-      </nav>
+      <Styles>
+         <Navbar className="collapseOnSelect mb-3" expand="lg">
+            <Navbar.Brand href="/">{title}</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+               <Nav className="ml-auto">
+                  <Nav.Item>
+                     <Nav.Link>
+                        <Link to="/">Home</Link>
+                     </Nav.Link>
+                  </Nav.Item>
+
+                  <Nav.Item>
+                     <Nav.Link>
+                        <Link to="/rent">Rent</Link>
+                     </Nav.Link>
+                  </Nav.Item>
+
+                  <Nav.Item>
+                     <Nav.Link>
+                        <Link to="/events">Events</Link>
+                     </Nav.Link>
+                  </Nav.Item>
+
+                  <Nav.Item>
+                     <Nav.Link>
+                        <Link to="/howitworks">How it works</Link>
+                     </Nav.Link>
+                  </Nav.Item>
+
+                  <Nav.Item>
+                     <Nav.Link>
+                        <Link to="/testimonials">Testimonials</Link>
+                     </Nav.Link>
+                  </Nav.Item>
+
+                  <Nav.Item>
+                     <Nav.Link>
+                        <Link to="/about">About</Link>
+                     </Nav.Link>
+                  </Nav.Item>
+
+                  <Nav.Item>
+                     <Nav.Link>
+                        <Link to="/">
+                           <Button className="btn btn-sm">Sign in / up</Button>
+                        </Link>
+                     </Nav.Link>
+                  </Nav.Item>
+               </Nav>
+            </Navbar.Collapse>
+         </Navbar>
+      </Styles>
    );
 };
 
@@ -49,4 +88,3 @@ Header.propTypes = {
 };
 
 export default Header;
- 

@@ -1,6 +1,7 @@
 {
   "name": "jerseyswap-web",
   "version": "0.1.0",
+  "description": "Jersey Rental React frontend",
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
@@ -17,7 +18,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "client": "react-scripts start",
+    "server": "npm run server --prefix backend",
+    "serverinstall": "npm install --prefix backend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,5 +39,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.19.2"
+  },
+  "proxy": "http://localhost:5000"
 }

@@ -5,12 +5,12 @@ import FakeapiContext from "../../context/fakeapi/fakeapiContext";
 
 const Events = () => {
    const fakeapiContext = useContext(FakeapiContext);
-   const { loadingforevents, events, getEvents } = fakeapiContext;
+   const { loading, events, getEvents } = fakeapiContext;
    useEffect(() => {
     getEvents();     // eslint-disable-next-line
    },[]);
 
-   if (loadingforevents) {
+   if (loading) {
     return <Spinner />;
  } else {
         return (

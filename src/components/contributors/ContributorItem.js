@@ -6,7 +6,7 @@ import { Image, Card } from "react-bootstrap";
 
 const ContributorItem = ({ contributor: { login, avatar_url, html_url } }) => {
    return (
-      <React.Fragment>
+      <Fragment>
          <Card className="text-center mb-3">
          <Card.Body>
             <Image src={avatar_url} roundedCircle
@@ -26,7 +26,7 @@ const ContributorItem = ({ contributor: { login, avatar_url, html_url } }) => {
             
             </Card.Body>
          </Card>
-      </React.Fragment>
+      </Fragment>
    );
 };
 

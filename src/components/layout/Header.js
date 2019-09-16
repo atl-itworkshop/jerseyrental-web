@@ -67,7 +67,7 @@ const Header = ({ title }) => {
 
                   <Nav.Item>
                      <Nav.Link>
-                        <Link to="/">
+                        <Link to="/login">
                            <Button className="btn btn-sm">Sign in / up</Button>
                         </Link>
                      </Nav.Link>

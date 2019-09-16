@@ -2,13 +2,12 @@ import React, { useReducer } from "react";
 import axios from "axios";
 import FakeapiContext from "./fakeapiContext";
 import FakeapiReducer from "./fakeapiReducer";
-import { GET_POSTS, SET_LOADING, GET_EVENTS, SET_LOADINGFOREVENTS } from "../types";
+import { GET_POSTS, SET_LOADING, GET_EVENTS } from "../types";
 
 const FakeapiState = props => {
    const initialState = {
       posts: [],
       events: [],
-      loadingforevents: false,
       loading: false
    };
 
@@ -16,7 +15,7 @@ const FakeapiState = props => {
 
     // Get Users
     const getEvents = async () => {
-        setLoadingforevents();
+        setLoading();
           const res = await axios.get(
            `http://jsonplaceholder.typicode.com/users?_limit=5`
         );
@@ -42,16 +41,14 @@ const FakeapiState = props => {
 
    // Set Loading
    const setLoading = () => dispatch({ type: SET_LOADING });
-   const setLoadingforevents = () => dispatch({ type: SET_LOADINGFOREVENTS });
-
+   
    return (
       <FakeapiContext.Provider
          value={{
             events: state.events,
-            loadingforevents: state.loadingforevents,
+            loading: state.loading,
             getEvents,
             posts: state.posts,
-            loading: state.loading,
             getPosts
           
          }}

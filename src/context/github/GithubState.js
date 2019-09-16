@@ -17,6 +17,8 @@ const GithubState = props => {
    const getContributors = async () => {
       setLoading();
 
+      delete axios.defaults.headers.common["x-auth-token"];
+
       const res = await axios.get(
          `https://api.github.com/repos/atl-itworkshop/docs/contributors`
       );
@@ -30,6 +32,8 @@ const GithubState = props => {
    // GET Contributor
    const getContributor = async username => {
       setLoading();
+
+      delete axios.defaults.headers.common["x-auth-token"];
 
       const res = await axios.get(`https://api.github.com/users/${username}`);
 

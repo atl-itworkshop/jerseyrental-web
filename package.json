@@ -4,8 +4,11 @@
   "description": "Jersey Rental React frontend",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.4.2",
+    "@material-ui/icons": "^4.4.1",
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
+    "material-ui": "^0.20.2",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.9.0",
@@ -23,7 +26,6 @@
     "server": "npm run server --prefix backend",
     "serverinstall": "npm install --prefix backend",
     "dev": "concurrently \"npm run server\" \"npm run client\""
-
   },
   "eslintConfig": {
     "extends": "react-app"
